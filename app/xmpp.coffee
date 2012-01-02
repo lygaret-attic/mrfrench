@@ -1,4 +1,4 @@
-resque 	= require 'coffee-resque'
+resque 	= require 'coffee-resque-sticky'
 xmpp 	= require 'simple-xmpp'
 logger 	= require 'lib/logger'
 config 	= require 'app/config'

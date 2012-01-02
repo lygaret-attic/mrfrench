@@ -6,8 +6,15 @@ mrfrench uses sticky workers (on top of coffee-resque) and promises (on top of n
 
 ### setup
 
+#### get libs
+1. `git submodule init`
+1. `cd third_party/coffee-resque-sticky`
+1. `npm link`
+1. `cd ..\\.. && npm link coffee-resque-sticky`
+
+#### setup and run
+1. `cp app/_config.coffee app/config.coffee && vi app/config.coffee`
 1. install [foreman](https://github.com/ddollar/foreman) (`gem install foreman`)
-1. move `app/_config.coffee` to `app/config.coffee` and edit with your relevant details.
 1. `foreman start`!
 
 ### status
