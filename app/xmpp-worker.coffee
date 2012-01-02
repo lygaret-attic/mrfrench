@@ -1,6 +1,6 @@
 resque 	= require 'coffee-resque'
 promise	= require 'fibers-promise'
-logger 	= require 'lib/logger'
+logger 	= require 'app/logger'
 config 	= require 'app/config'
 Talker  = require 'app/talker'
 

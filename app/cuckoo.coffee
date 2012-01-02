@@ -1,6 +1,6 @@
 _		= require 'underscore'
 moment 	= require 'moment'
-logger 	= require 'lib/logger'
+logger 	= require 'app/logger'
 
 doEvery = (ms, cb) -> setInterval cb, ms
 noMore  = (id) -> clearInterval(id)

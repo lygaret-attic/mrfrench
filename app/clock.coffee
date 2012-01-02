@@ -1,5 +1,5 @@
 resque = require 'coffee-resque'
-cuckoo = require 'lib/cuckoo'
+cuckoo = require 'app/cuckoo'
 config = require 'app/config'
 
 clock = new cuckoo.Clock
