@@ -12,7 +12,7 @@ MyFormatter = class extends Formatter
 
 logger = new Logger
 	transports:
-		level: 5
+		level: 7
 		formatter: new MyFormatter
 		
 for own name, code of logger.config.levels

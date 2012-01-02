@@ -13,6 +13,7 @@
   },
   "dependencies": {
 	  "caterpillar": "0.1.x",
+	  "redis": ">=0.5.2", 
 	  "coffee-resque": "0.1.x",
 	  "coffee-script": "1.2.x",
 	  "fibers-promise": "0.x",

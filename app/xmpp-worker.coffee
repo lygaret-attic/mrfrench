@@ -4,7 +4,7 @@ logger 	= require 'lib/logger'
 config 	= require 'app/config'
 Talker  = require 'app/talker'
 
-queue = resque.connect config.redis
+queue = resque.connect { host: config.redis.host, port: config.redis.port, timeout: 250 }
 chats = {}
 
 say = (to, message) -> 
@@ -14,6 +14,10 @@ say = (to, message) ->
 get = (from) -> 
 	logger.debug "reading: [#{from}]"
 	chats[from]?.get()
+	
+done = (to) ->
+	logger.debug "conversation over"
+	queue.enqueue "xmpp-out", "done", [to]
 
 start = (from, message) ->
 	if chats[from]?
@@ -33,15 +37,19 @@ start = (from, message) ->
 			chats[from] = promise()
 			talker = new Talker _say, _get
 			talker.talk()
-			logger.notice "convo over: [#{from}]"			
+			
+			done from			
 			delete chats[from]
 
-worker = queue.worker 'xmpp-in', 
+worker = queue.worker 'xmpp-incoming',
+	new: (name, callback) ->
+		logger.debug "new owner for #{name}"
+		worker.queues.push name
+		callback()
+		
 	recv: (args...) ->
 		args.pop()()
-		logger.debug "beep", args
 		start.apply(@, args)
-		logger.debug "boop"
 
 worker.start()
 logger.notice "talker ready"
