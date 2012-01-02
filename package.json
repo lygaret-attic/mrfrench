@@ -1,0 +1,24 @@
+{
+  "author": "Jon Raphaelson <jonraphaelson@gmail.com> (http://jonraphaelson.name)",
+  "name": "mrfrench",
+  "description": "friendly neighborhood coversational jabberbot",
+  "version": "0.0.1",
+  "homepage": "http://github.com/lygaret/mrfrench",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lygaret/mrfrench.git"
+  },
+  "engines": {
+    "node": "~0.6.2"
+  },
+  "dependencies": {
+	  "caterpillar": "0.1.x",
+	  "coffee-resque": "0.1.x",
+	  "coffee-script": "1.2.x",
+	  "fibers-promise": "0.x",
+	  "moment": "1.2.x",
+	  "simple-xmpp": "0.1.x",
+	  "underscore": "1.2.x"
+  },
+  "devDependencies": {}
+}
