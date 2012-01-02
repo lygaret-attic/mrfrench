@@ -4,17 +4,16 @@
 Most chat bots I've seen respond corretly only to single inputs: they don't have the capacity to have multipart conversations. 
 mrfrench uses sticky workers (on top of coffee-resque) and promises (on top of node-fibers) to enable the bot to ask questions of conversation partners.
 
+### pre-reqs
+1. [npm](http://npmjs.org)
+1. [foreman](https://github.com/ddollar/foreman) (`gem install foreman`)
+
 ### setup
-
-#### get libs
-1. `git submodule init`
-1. `cd third_party/coffee-resque-sticky`
-1. `npm link`
-1. `cd ..\\.. && npm link coffee-resque-sticky`
-
-#### setup and run
+1. `npm install`
+1. `git submodule update --init`
 1. `cp app/_config.coffee app/config.coffee && vi app/config.coffee`
-1. install [foreman](https://github.com/ddollar/foreman) (`gem install foreman`)
+
+### run!
 1. `foreman start`!
 
 ### status
