@@ -1,4 +1,4 @@
-resque 	= require 'coffee-resque-sticky'
+resque 	= require 'coffee-resque'
 promise	= require 'fibers-promise'
 logger 	= require 'lib/logger'
 config 	= require 'app/config'

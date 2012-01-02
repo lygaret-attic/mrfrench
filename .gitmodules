@@ -1,3 +1,0 @@
-[submodule "third_party/coffee-resque-sticky"]
-	path = third_party/coffee-resque-sticky
-	url = git@github.com:lygaret/coffee-resque.git

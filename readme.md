@@ -10,7 +10,6 @@ mrfrench uses sticky workers (on top of coffee-resque) and promises (on top of n
 
 ### setup
 1. `npm install`
-1. `git submodule update --init`
 1. `cp app/_config.coffee app/config.coffee && vi app/config.coffee`
 
 ### run!

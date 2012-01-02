@@ -1,4 +1,4 @@
-resque = require 'coffee-resque-sticky'
+resque = require 'coffee-resque'
 cuckoo = require 'lib/cuckoo'
 config = require 'app/config'
 
