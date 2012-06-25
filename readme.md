@@ -1,7 +1,7 @@
 # mrfrench
 ## a jabberbot designed to handle multi-part conversations.
 
-Most chat bots I've seen respond corretly only to single inputs: they don't have the capacity to have multipart conversations. 
+Most chat bots I've seen respond correctly only to single inputs: they don't have the capacity to have multipart conversations. 
 mrfrench uses sticky workers (on top of coffee-resque) and promises (on top of node-fibers) to enable the bot to ask questions of conversation partners.
 
 ### pre-reqs
